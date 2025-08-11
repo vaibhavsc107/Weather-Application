@@ -10,7 +10,7 @@ function App() {
   const fetchWeather = async () => {
     if (!city) return;
     try {
-      const res = await axios.get(`http://localhost:5000/api/weather/${city}`);
+      const res = await axios.get(`https://weather-api.onrender.com/api/weather/${city}`);
       setWeather(res.data);
     } catch (err) {
       alert('City not found!');
